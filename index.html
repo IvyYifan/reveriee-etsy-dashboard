@@ -1,43 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Reveriee Etsy Dashboard</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      line-height: 1.6;
-    }
-    h1 { color: #d96b6b; }
-    h2 { margin-top: 1.5em; }
-    a { color: #0073aa; text-decoration: none; }
-  </style>
+  <meta name="description" content="Private analytics dashboard for the Reveriee Etsy shop.">
+  <link rel="icon" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Reveriee Etsy Dashboard</h1>
-  <p><strong>Developer:</strong> Yifan Zhou</p>
-  <p><strong>Contact:</strong> ivy@myreveriee.com</p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="assets/mark.svg" alt="" class="brand-mark">
+        <div class="brand-text">
+          <span class="brand-name">Reveriee</span>
+          <span class="brand-sub">Etsy Dashboard</span>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="./">Home</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  <h2>About</h2>
-  <p>
-    Reveriee Etsy Dashboard is a private analytics tool that connects to the Etsy OpenAPI v3 to
-    collect daily shop statistics including views, favorites, sales, and conversion rates.
-    The tool helps the Reveriee team optimize listings and marketing strategies.
-  </p>
+  <main>
+    <section class="hero container">
+      <h1>Private seller analytics for the Reveriee Etsy shop</h1>
+      <p class="lede">
+        This internal tool connects to the official Etsy Open API v3 via OAuth to fetch daily, minimal shop metrics. Data is used to build non‑public dashboards for operations and inventory planning.
+      </p>
+      <ul class="badges">
+        <li>Read‑only</li>
+        <li>Minimum scopes</li>
+        <li>No scraping</li>
+        <li>No resale</li>
+      </ul>
+    </section>
 
-  <h2>Data & Privacy</h2>
-  <p>
-    This tool only accesses authorized shop data through Etsy’s official API.
-    It does not scrape, store, or resell any member information.
-    Data is processed securely and deleted upon request.
-  </p>
+    <section class="cards container">
+      <article class="card">
+        <h3>What it does</h3>
+        <p>Aggregates listing‑level and variation‑level stats such as impressions, favorites, orders, unit price, and shop sections into a daily snapshot for analysis.</p>
+      </article>
+      <article class="card">
+        <h3>How data is handled</h3>
+        <p>Only authorized shop data is accessed. Storage follows the principle of data minimization and retention aligned to operational needs. You can request deletion at any time.</p>
+      </article>
+      <article class="card">
+        <h3>Security</h3>
+        <p>API credentials are stored securely. In the unlikely event of a suspected data incident we will notify the affected seller and Etsy within 24 hours.</p>
+      </article>
+    </section>
 
-  <h2>Legal Notice</h2>
-  <p>
-    “Etsy” is a trademark of Etsy, Inc.  
-    This application uses Etsy’s API but is not endorsed or certified by Etsy.
-  </p>
+    <section class="notice container">
+      <p><strong>Trademark notice.</strong> “Etsy” is a trademark of Etsy, Inc. This Application uses Etsy’s API but is not endorsed or certified by Etsy.</p>
+    </section>
+
+    <section id="contact" class="contact container">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:ivy@myreveriee.com">ivy@myreveriee.com</a></p>
+      <p>GitHub: <a href="https://github.com/IvyYifan/reveriee-etsy-dashboard" target="_blank" rel="noreferrer">IvyYifan/reveriee-etsy-dashboard</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="y"></span> Reveriee. All rights reserved.</span>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

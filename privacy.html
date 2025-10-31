@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Reveriee Etsy Dashboard</title>
+  <link rel="icon" href="assets/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="assets/mark.svg" alt="" class="brand-mark">
+        <div class="brand-text">
+          <span class="brand-name">Reveriee</span>
+          <span class="brand-sub">Etsy Dashboard</span>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="./">Home</a>
+        <a href="privacy.html" aria-current="page">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container policy">
+    <h1>Privacy Policy</h1>
+    <p class="muted">Effective date: <span id="date"></span></p>
+
+    <h2>What we access</h2>
+    <p>After OAuth authorization we read only the minimum data needed for analytics: shop stats, listings and variations, sections, and order summaries.</p>
+
+    <h2>Purpose of processing</h2>
+    <p>To produce private, non‑public dashboards that help manage operations, inventory, and marketing. We do not build audience profiles or sell data.</p>
+
+    <h2>Storage and retention</h2>
+    <p>Daily snapshots are stored for trend analysis and kept only as long as necessary for the service. You may request deletion at any time at the contact below.</p>
+
+    <h2>Security</h2>
+    <p>API credentials and data are stored securely with access controls and encryption at rest where possible. If a data incident is suspected we will notify affected sellers and Etsy within 24 hours.</p>
+
+    <h2>Your choices</h2>
+    <ul>
+      <li>Revoke OAuth access at any time in Etsy settings</li>
+      <li>Request a copy or deletion of stored snapshots</li>
+      <li>Contact us for questions or complaints</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:ivy@myreveriee.com">ivy@myreveriee.com</a></p>
+
+    <h2>Notice</h2>
+    <p>“Etsy” is a trademark of Etsy, Inc. This Application uses Etsy’s API but is not endorsed or certified by Etsy.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="y"></span> Reveriee.</span>
+      <a href="./">Home</a>
+    </div>
+  </footer>
+
+  <script>
+    const d = new Date();
+    document.getElementById('y').textContent = d.getFullYear();
+    document.getElementById('date').textContent = d.toISOString().slice(0,10);
+  </script>
+</body>
+</html>
